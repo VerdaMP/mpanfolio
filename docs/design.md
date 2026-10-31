@@ -153,7 +153,7 @@ Design at 390 px wide with 20 px page gutters.
 
 ## Components and states
 
-Create these components in Penpot with semantic names:
+UI building blocks, named the same in code and in any future Penpot components:
 
 - `navigation/link/default`
 - `navigation/link/active`
@@ -170,26 +170,33 @@ Create these components in Penpot with semantic names:
 
 Interactive elements need default, hover, and keyboard-focus states. Focus uses the orange token and must not depend on color alone.
 
-## Penpot file structure
+## Penpot file
 
-Create two Penpot pages:
+Source design: Penpot file **mpanfolio Portfolio** (project “New Project 1”, Personal Projects team on design.penpot.app). The design is the visual reference for implementation; this document is the reference for tokens and rules.
 
 ### `01 Foundations`
 
-- Color token swatches
-- Type scale
-- Spacing scale
-- Buttons and links with states
-- Case-study, experience, skills, and contact components
+Board `foundations/overview`:
+
+- Color swatches for every global color token
+- Type samples: display, section heading, body, technical label
+- Primary and secondary button defaults
+- Case-study card sample
+
+The token set `mpanfolio/global` holds the color, spacing, and radius tokens.
 
 ### `02 Portfolio`
 
 Boards arranged left to right:
 
-1. `portfolio/home/desktop-1440`
-2. `portfolio/home/mobile-390`
+1. `portfolio/home/desktop-1440` (1440 × 2840)
+2. `portfolio/home/mobile-390` (390 × 3840)
 
-Use flex layouts for page stacks, navigation, buttons, cards, and lists. Keep nesting to four levels or fewer. Name layers by function, not appearance.
+Known limits of the current file:
+
+- Boards use absolute positioning, not flex layout. Build the page with CSS flex/grid from the spacing rules above, not from absolute coordinates.
+- Hover and focus states are not drawn. Implement them from the color and focus tokens.
+- No reusable Penpot components exist yet. Create them only if the design is iterated in Penpot again.
 
 ## Accessibility acceptance
 
