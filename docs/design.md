@@ -2,7 +2,7 @@
 
 ## Design goal
 
-Present Michael Pantoja as a senior engineer who makes complex systems understandable and dependable. The site should feel precise, calm, credible, and human—not corporate, military-themed, or decorative.
+Present Michael Pantoja as a senior engineer who makes complex systems understandable and dependable. The site should feel precise, calm, credible, and human—not corporate, military-themed, or decorative. The palette follows Michael's Omarchy theme, Gilded Graphite: dark graphite surfaces, gold type, and an amethyst accent, for a refined, slightly luxurious tone.
 
 ## Principles
 
@@ -28,31 +28,58 @@ Keep body lines between 55 and 72 characters where practical.
 
 ## Color tokens
 
+Source: Omarchy theme `gilded-graphite` (`~/.config/omarchy/themes/gilded-graphite/colors.toml`). The site is dark-only, matching the theme's `mode = "dark"`.
+
 ### Global
 
-- `color.base.ink.900`: `#132238`
-- `color.base.slate.700`: `#44546A`
-- `color.base.slate.300`: `#BCC5D1`
-- `color.base.slate.150`: `#DCE2E8`
-- `color.base.paper.100`: `#F6F4EF`
-- `color.base.white`: `#FFFFFF`
-- `color.base.blue.700`: `#174EA6`
-- `color.base.blue.800`: `#123C80`
-- `color.base.orange.600`: `#B84A2B`
+| Token | Value | Theme source |
+| --- | --- | --- |
+| `color.base.graphite.975` | `#100F13` | `darker_background` |
+| `color.base.graphite.900` | `#1C1B1F` | `background` |
+| `color.base.graphite.800` | `#28262D` | `lighter_background` |
+| `color.base.graphite.700` | `#302B38` | `selection` |
+| `color.base.graphite.500` | `#5C5566` | `muted` |
+| `color.base.gold.100` | `#F5E6B0` | `bright_foreground` |
+| `color.base.gold.200` | `#E8C877` | `bright_yellow` |
+| `color.base.gold.300` | `#E0C87E` | `foreground` |
+| `color.base.gold.400` | `#CDB469` | `light_foreground` |
+| `color.base.gold.600` | `#A6936A` | derived; `dark_foreground` (`#8C7B4E`) fails AA for text |
+| `color.base.amethyst.400` | `#A488E0` | `accent` |
+| `color.base.amethyst.300` | `#C7A3E6` | `bright_magenta` |
+| `color.base.orange.500` | `#C8944A` | `orange` |
 
 ### Semantic
 
-- `color.bg.default`: `color.base.paper.100`
-- `color.bg.surface`: `color.base.white`
-- `color.text.primary`: `color.base.ink.900`
-- `color.text.muted`: `color.base.slate.700`
-- `color.border.default`: `color.base.slate.300`
-- `color.border.subtle`: `color.base.slate.150`
-- `color.action.primary`: `color.base.blue.700`
-- `color.action.primary.hover`: `color.base.blue.800`
-- `color.focus`: `color.base.orange.600`
+- `color.bg.default`: `color.base.graphite.900`
+- `color.bg.surface`: `color.base.graphite.800`
+- `color.bg.inset`: `color.base.graphite.975`
+- `color.text.heading`: `color.base.gold.100`
+- `color.text.body`: `color.base.gold.400`
+- `color.text.muted`: `color.base.gold.600`
+- `color.text.label`: `color.base.amethyst.400`
+- `color.text.emphasis`: `color.base.amethyst.300`
+- `color.text.on-action`: `color.base.graphite.975`
+- `color.border.default`: `color.base.graphite.500`
+- `color.border.subtle`: `color.base.graphite.700`
+- `color.action.primary`: `color.base.amethyst.400`
+- `color.action.primary.hover`: `color.base.amethyst.300`
+- `color.focus`: `color.base.gold.200`
+- `color.status.private`: `color.base.orange.500`
 
-Use blue for actions only. Use orange for focus indicators and small emphasis, not large surfaces.
+Gold carries reading; amethyst marks actions, labels, and results. Use orange only for the private-work tag. Secondary buttons use a transparent fill with an amethyst border.
+
+### Contrast (WCAG 2.x)
+
+| Pair | Ratio |
+| --- | --- |
+| Heading gold on graphite | 13.7:1 |
+| Body gold on graphite / surface | 8.4:1 / 7.4:1 |
+| Muted gold on graphite / surface | 5.7:1 / 5.0:1 |
+| Amethyst label on graphite / surface | 5.9:1 / 5.1:1 |
+| Text on amethyst button | 6.5:1 |
+| Focus gold on graphite | 10.6:1 |
+
+Do not use theme `muted` (`#5C5566`, 2.4:1) or `dark_foreground` for text.
 
 ## Spacing and shape tokens
 
@@ -168,7 +195,7 @@ UI building blocks, named the same in code and in any future Penpot components:
 - `skills/group`
 - `contact/panel`
 
-Interactive elements need default, hover, and keyboard-focus states. Focus uses the orange token and must not depend on color alone.
+Interactive elements need default, hover, and keyboard-focus states. Focus uses the `color.focus` gold ring and must not depend on color alone.
 
 ## Penpot file
 
