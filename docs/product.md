@@ -25,6 +25,8 @@ The launch site uses `/` as a complete portfolio with these sections:
 5. **Contact** — direct contact method and useful professional links.
 6. **Footer** — essential navigation and professional links.
 
+`/about` is a professional biography page reached from the header's About link: career path, working principles, interests outside work, and the primary contact action.
+
 ## Launch non-goals
 
 - Blog, post authoring, tags, RSS, search, or syntax highlighting.

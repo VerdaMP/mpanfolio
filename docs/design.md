@@ -66,7 +66,7 @@ Source: Omarchy theme `gilded-graphite` (`~/.config/omarchy/themes/gilded-graphi
 - `color.focus`: `color.base.gold.200`
 - `color.status.private`: `color.base.orange.500`
 
-Gold carries reading; amethyst marks actions, labels, and results. Use orange only for the private-work tag. Secondary buttons use a transparent fill with an amethyst border.
+Gold carries reading; amethyst marks actions, labels, and results. Use orange only for the private-work tag.
 
 ### Contrast (WCAG 2.x)
 
@@ -105,14 +105,26 @@ Avoid heavy shadows. Use borders and background contrast for grouping.
 
 ## Page structure
 
-Launch uses one route, `/`, with this order:
+Launch uses two routes.
+
+`/` (home), in this order:
 
 1. Header
 2. Hero
 3. Selected work
 4. Experience
 5. Skills
-6. About and contact
+6. Contact
+7. Footer
+
+`/about` (professional biography), in this order:
+
+1. Header, with About marked active
+2. Intro and at-a-glance panel
+3. My path
+4. How I work
+5. Beyond the day job
+6. Call to action
 7. Footer
 
 No blog navigation until a real post exists.
@@ -124,16 +136,17 @@ Design at 1440 px wide with a 1120 px content container.
 ### Header
 
 - 72 px minimum height.
-- Wordmark: `Michael Pantoja`.
-- Anchor links: Work, Experience, Skills, About.
-- Text contact action: `Discuss a role`.
+- Wordmark: `Michael Pantoja`, linking to `/`.
+- Links: Work, Experience, and Skills jump to sections on `/` (`/#work`, `/#experience`, `/#skills`). They act as the page's table of contents. About routes to `/about`.
+- The current page's link uses heading gold, weight 600, and a 2 px amethyst underline.
+- Contact action: `Discuss a role` primary button.
 - No hamburger menu at desktop width.
 
 ### Hero
 
 - Two-column grid, approximately 7/5.
-- Left: eyebrow, display heading, supporting copy, primary and secondary actions.
-- Right: compact profile panel with clearance, experience, current focus, and location availability only if approved.
+- Left: eyebrow, display heading, supporting copy, and one primary action. No secondary "view experience" action; the header already links to every section.
+- Right: compact profile panel with experience, current focus, stack, and location.
 - Minimum 120 px top and bottom padding.
 - No portrait or decorative illustration.
 
@@ -155,11 +168,18 @@ Design at 1440 px wide with a 1120 px content container.
 - Grouped text lists in a three-column grid.
 - Avoid dozens of pill badges; grouped lists scan faster and carry less visual noise.
 
-### About and contact
+### Contact
 
-- Short biography on left.
-- Contact panel on right with primary email action and LinkedIn/GitHub links.
-- Repeat primary contact action once.
+- One-line prompt with the primary `Discuss a role` action.
+- The longer biography lives on `/about`.
+
+### About page
+
+- Intro: `ABOUT` eyebrow, display heading, lead paragraph on the left; at-a-glance panel on the right (location, experience, education, current focus).
+- My path: section title on the left; career narrative paragraphs on the right.
+- How I work: three principle cards in a row.
+- Beyond the day job: interest rows with a title column and a description column, separated by dividers.
+- Call to action: inset panel with prompt, Email · LinkedIn · GitHub links, and the `Discuss a role` button.
 
 ### Footer
 
@@ -170,9 +190,9 @@ Design at 1440 px wide with a 1120 px content container.
 
 Design at 390 px wide with 20 px page gutters.
 
-- Header uses wordmark plus a visible `Contact` link. Do not hide primary navigation behind JavaScript.
-- Optional section links wrap below the header or are omitted if they crowd the first screen.
-- Hero becomes one column. Primary action is full width; secondary action remains text-first.
+- Header uses the wordmark plus visible `About` and `Contact` links. Do not hide primary navigation behind JavaScript.
+- Section links (Work, Experience, Skills) are omitted on mobile; the page is short enough to scroll.
+- Hero becomes one column with a full-width primary action.
 - Case studies, experience rows, skill groups, and contact panel become single-column stacks.
 - Dates sit above role headings.
 - Use 72 px section spacing and 40 px card padding reduced to 24 px on narrow screens.
@@ -187,13 +207,12 @@ UI building blocks, named the same in code and in any future Penpot components:
 - `button/primary/default`
 - `button/primary/hover`
 - `button/primary/focus`
-- `button/secondary/default`
-- `button/secondary/hover`
-- `button/secondary/focus`
 - `case-study/card`
 - `experience/entry`
 - `skills/group`
 - `contact/panel`
+
+Button labels are centered horizontally and vertically within the button.
 
 Interactive elements need default, hover, and keyboard-focus states. Focus uses the `color.focus` gold ring and must not depend on color alone.
 
@@ -207,7 +226,7 @@ Board `foundations/overview`:
 
 - Color swatches for every global color token
 - Type samples: display, section heading, body, technical label
-- Primary and secondary button defaults
+- Primary button default
 - Case-study card sample
 
 The token set `mpanfolio/global` holds the color, spacing, and radius tokens.
@@ -219,11 +238,17 @@ Boards arranged left to right:
 1. `portfolio/home/desktop-1440` (1440 × 2840)
 2. `portfolio/home/mobile-390` (390 × 3840)
 
+### `03 About`
+
+1. `about/desktop-1440` (1440 × 2539)
+2. `about/mobile-390` (390 × 3569)
+
 Known limits of the current file:
 
 - Boards use absolute positioning, not flex layout. Build the page with CSS flex/grid from the spacing rules above, not from absolute coordinates.
 - Hover and focus states are not drawn. Implement them from the color and focus tokens.
 - No reusable Penpot components exist yet. Create them only if the design is iterated in Penpot again.
+- Navigation is not wired as a Penpot prototype; Penpot prototype links cannot cross pages. Routes are defined above.
 
 ## Accessibility acceptance
 

@@ -36,11 +36,56 @@ I am a senior full-stack software engineer with 7+ years of experience deliverin
 ### Actions
 
 - **Primary:** Discuss a role — `mailto:Mike.a.pantoja@gmail.com`
-- **Secondary:** View experience — `#experience`
+
+No secondary hero action. The header links (Work, Experience, Skills) already jump to each section.
 
 ## Short biography
 
 Michael Pantoja is a senior full-stack software engineer with 7+ years of experience in the DoD and intelligence communities. He currently leads UI development for model-based systems engineering features, building interactive visualizations and complex import workflows with Angular, JointJS, STOMP, and Kafka. His broader experience spans React, Node.js, Python, Java, C++, testing, technical documentation, legacy modernization, and team mentorship. He holds a B.S. in Computer Science from Wright State University.
+
+## About page (`/about`)
+
+### Heading
+
+I build software that makes complex systems understandable.
+
+### Lead
+
+I am a senior full-stack engineer with more than seven years of experience delivering mission software in the DoD and intelligence communities. I care about the moment a tangled system finally makes sense to the person using it, and I build interfaces, tests, and documentation that get people there.
+
+### At a glance
+
+- **Based in:** Beavercreek, Ohio
+- **Experience:** 7+ years in DoD and intelligence software
+- **Education:** B.S. Computer Science, Wright State University
+- **Current focus:** MBSE tooling and front-end architecture
+
+### My path — From intern to technical lead
+
+1. I started at Northrop Grumman in 2017 as a software engineering intern, writing Java and Python on an agile team and documenting procedures so the next new hire could ramp up faster.
+2. After earning my B.S. in Computer Science from Wright State University in 2019, I stayed on as a cyber associate software engineer and served as technical lead, guiding programmers and support staff through delivery.
+3. At Ball Aerospace I built Angular and React interfaces, supported Jenkins-based delivery, and introduced unit testing to a project that had none.
+4. Today at NextGen Federal Systems I lead UI development for model-based systems engineering features: rendering SysML state machines, animating simulations, and turning a fragile import workflow into a typed, predictable one.
+
+### How I work — Principles I bring to every team
+
+1. **Make complex state visible.** I build interfaces that show what a system is doing, like SysML diagrams that animate execution state as simulations run.
+2. **Test against reality.** I favor integration tests that exercise real models over mocks, and I have introduced unit testing to projects that started with none.
+3. **Leave the team stronger.** I mentor across the stack, from teaching a back-end developer React to training a team on Vim for a restricted toolset.
+
+### Beyond the day job — What keeps me curious
+
+**Needs Michael's confirmation before launch.** These interests come from public GitHub repositories and the local workstation setup, not from the resume. Replace or extend them with real hobbies.
+
+- **Linux and desktop tooling:** I run Arch Linux with Hyprland and design my own desktop themes. This site's palette comes from one of them.
+- **Keyboard-driven workflows:** Vim and Neovim are home base. I like tools that stay out of the way and reward practice.
+- **Small builds:** Side projects like an Asteroids game in Python and a React FizzBuzz timer keep me experimenting outside work.
+
+### Call to action
+
+- **Prompt:** Looking for an engineer who makes complex systems clear?
+- **Links:** Email · LinkedIn · GitHub
+- **Primary:** Discuss a role — `mailto:Mike.a.pantoja@gmail.com`
 
 ## Selected work
 
