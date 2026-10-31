@@ -240,8 +240,8 @@ Boards arranged left to right:
 
 ### `03 About`
 
-1. `about/desktop-1440` (1440 × 2539)
-2. `about/mobile-390` (390 × 3569)
+1. `about/desktop-1440` (1440 × 2711)
+2. `about/mobile-390` (390 × 3800)
 
 Known limits of the current file:
 

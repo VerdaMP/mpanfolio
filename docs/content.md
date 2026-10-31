@@ -75,8 +75,10 @@ I am a senior full-stack engineer with more than seven years of experience deliv
 
 ### Beyond the day job — What keeps me curious
 
-**Needs Michael's confirmation before launch.** These interests come from public GitHub repositories and the local workstation setup, not from the resume. Replace or extend them with real hobbies.
+Video games and AI tools come directly from Michael. The last three rows come from public GitHub repositories and the local workstation setup; **Michael should confirm them before launch.**
 
+- **Video games:** I enjoy video games, and Pokémon is my favorite series.
+- **AI tools and automation:** I enjoy tinkering with AI tools and workflows that automate repetitive work and boost productivity and efficiency.
 - **Linux and desktop tooling:** I run Arch Linux with Hyprland and design my own desktop themes. This site's palette comes from one of them.
 - **Keyboard-driven workflows:** Vim and Neovim are home base. I like tools that stay out of the way and reward practice.
 - **Small builds:** Side projects like an Asteroids game in Python and a React FizzBuzz timer keep me experimenting outside work.
